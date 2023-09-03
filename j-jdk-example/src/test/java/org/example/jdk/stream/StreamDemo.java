@@ -222,4 +222,30 @@ public class StreamDemo {
                 .findAny();
         any.ifPresent(System.out::println); // 输出结果: 2 或 4（取决于并行处理的结果）
     }
+
+    @Test
+    public void countTest() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        long count = numbers.stream()
+                .count();
+        System.out.println(count); // 输出结果: 5
+    }
+
+    @Test
+    public void maxTest() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        Optional<Integer> max = numbers.stream()
+                .max(Integer::compareTo);
+        max.ifPresent(System.out::println); // 输出结果: 5
+    }
+
+    @Test
+    public void minTest() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        Optional<Integer> min = numbers.stream()
+                .min(Integer::compareTo);
+        min.ifPresent(System.out::println); // 输出结果: 1
+    }
+
+
 }
