@@ -12,6 +12,7 @@
     <modules>
         <module>j-dependencies</module>
         <module>j-jdk-example</module>
+        <module>j-util</module>
     </modules>
 
     <properties>

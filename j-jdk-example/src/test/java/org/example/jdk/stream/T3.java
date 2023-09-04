@@ -2,7 +2,9 @@ package org.example.jdk.stream;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 假设我们以索引x为中心,取前后各种5个数
+ */
 public class T3 {
 
 

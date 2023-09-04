@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 假设我们以索引x为中心,取前后各种5个数
+ */
 public class T2 {
 
     public static void main(String[] args) {
@@ -12,7 +15,7 @@ public class T2 {
         for (int i = 0; i < 9; i++) {
             list.add(i);
         }
-        int centerIndex = 7;  // 假设我们以索引2为中心
+        int centerIndex = 7;  // 假设我们以索引7为中心
 
         System.out.println(getResult(list, centerIndex));
     }
