@@ -18,19 +18,30 @@
         <spring.cloud.alibaba.version>2021.0.4.0</spring.cloud.alibaba.version>
         <!--apache 相关 -->
         <apache.commom.version>3.3.2</apache.commom.version>
+        <!--jsoup 相关 -->
+        <jsoup.version>1.15.4</jsoup.version>
+
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- spring -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!-- apache -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commom.version}</version>
+            </dependency>
+            <!-- jsoup -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

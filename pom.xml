@@ -13,7 +13,8 @@
         <module>j-dependencies</module>
         <module>j-jdk-example</module>
         <module>j-util</module>
-        <module>j-apache-commons</module>
+        <module>j-apache-commons-example</module>
+        <module>j-jsoup-example</module>
     </modules>
 
     <properties>
