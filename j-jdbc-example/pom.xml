@@ -5,11 +5,11 @@
     <parent>
         <artifactId>Java-learning-examples</artifactId>
         <groupId>org.example</groupId>
-        <version>${jversion}</version>
+        <version>0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>j-util</artifactId>
+    <artifactId>j-jdbc-example</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,6 +19,18 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>j-util</artifactId>
         </dependency>
     </dependencies>
 </project>

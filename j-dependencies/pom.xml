@@ -18,9 +18,12 @@
         <spring.cloud.alibaba.version>2021.0.4.0</spring.cloud.alibaba.version>
         <!--apache 相关 -->
         <apache.commom.version>3.3.2</apache.commom.version>
+        <apache.commom.dbcp2.version>2.9.0</apache.commom.dbcp2.version>
+
         <!--jsoup 相关 -->
         <jsoup.version>1.15.4</jsoup.version>
-
+        <!-- mysql -->
+        <mysql.version>8.0.30</mysql.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -37,11 +40,27 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commom.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${apache.commom.dbcp2.version}</version>
+            </dependency>
             <!-- jsoup -->
             <dependency>
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>
                 <version>${jsoup.version}</version>
+            </dependency>
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>j-util</artifactId>
+                <version>${jversion}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,4 +1,4 @@
-package com.example.apache;
+package org.example.apache;
 
 import jdk.jfr.StackTrace;
 import org.apache.commons.lang3.StringEscapeUtils;

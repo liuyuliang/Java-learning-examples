@@ -15,6 +15,7 @@
         <module>j-util</module>
         <module>j-apache-commons-example</module>
         <module>j-jsoup-example</module>
+        <module>j-jdbc-example</module>
     </modules>
 
     <properties>
