@@ -16,7 +16,8 @@
         <spring.boot.version>2.7.14</spring.boot.version>
         <spring.cloud.version>2021.0.5</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.0.4.0</spring.cloud.alibaba.version>
-
+        <!--apache 相关 -->
+        <apache.commom.version>3.3.2</apache.commom.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -25,6 +26,11 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring.boot.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commom.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
