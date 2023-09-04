@@ -247,5 +247,27 @@ public class StreamDemo {
         min.ifPresent(System.out::println); // 输出结果: 1
     }
 
+    /**
+     * <pre>在传统的顺序流中，所有的操作都是在单个线程上按照顺序执行的。而并行流则会将流的元素分成多个小块，并在多个线程上并行处理这些小块，
+     * 最后将结果合并起来。这样可以充分利用多核处理器的优势，加快数据处理的速度。
+     *
+     * 要将一个顺序流转换为并行流，只需调用流的 parallel() 方法即可。</pre>
+     */
+    @Test
+    public void parallelTest() {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        numbers.stream()
+                .parallel()
+                .forEach(System.out::println);
+    }
+
+    @Test
+    public void mapTest2() {
+        List<String> list = Arrays.asList("apple", "banana", "orange", "grapefruit", "kiwi");
+        List<String> resultList = list.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.toList());
+        System.out.println(resultList);
+    }
 
 }
