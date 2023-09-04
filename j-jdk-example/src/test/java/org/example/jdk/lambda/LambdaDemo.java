@@ -32,7 +32,7 @@ import java.util.List;
  * @author Yuliang Lau
  * @date 2023/9/1 10:57
  */
-public class Demo {
+public class LambdaDemo {
     @Test
     public void testThread() {
         Thread t2 = new Thread(() -> System.out.println("使用lambda方式创建线程"));

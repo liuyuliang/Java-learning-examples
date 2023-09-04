@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
  * @author Yuliang Lau
  * @date 2023/9/4 10:26
  */
-public class Test {
+public class AnnontationTest {
     @org.junit.jupiter.api.Test
     public void annotationTest() throws IllegalAccessException {
         UserDto userDto = new UserDto();
