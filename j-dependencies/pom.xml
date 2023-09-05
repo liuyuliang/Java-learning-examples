@@ -24,6 +24,10 @@
         <jsoup.version>1.15.4</jsoup.version>
         <!-- mysql -->
         <mysql.version>8.0.30</mysql.version>
+        <!-- CGLIB -->
+        <cglib.version>3.3.0</cglib.version>
+        <!-- jcraft -->
+        <jcraft.version>0.1.55</jcraft.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -57,11 +61,24 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <!-- cglib -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+            <!-- jcraft -->
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${jcraft.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.example</groupId>
                 <artifactId>j-util</artifactId>
                 <version>${jversion}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>
