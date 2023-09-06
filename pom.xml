@@ -17,6 +17,7 @@
         <module>j-jsoup-example</module>
         <module>j-jdbc-example</module>
         <module>j-mybatis-example</module>
+        <module>j-mybatis-plus-example</module>
     </modules>
 
     <properties>

@@ -34,6 +34,8 @@
         <lombok.version>1.18.28</lombok.version>
         <!--sjf4j-->
         <sjf4j.version>1.7.36</sjf4j.version>
+        <!--mybaits pluc -->
+        <mybatis-plus>3.3.2</mybatis-plus>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -97,10 +99,17 @@
                 <version>${lombok.version}</version>
                 <!-- <optional>true</optional>-->
             </dependency>
+            <!--slf4j -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${sjf4j.version}</version>
+            </dependency>
+            <!-- mybatis plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus}</version>
             </dependency>
             <dependency>
                 <groupId>org.example</groupId>
