@@ -16,6 +16,7 @@
         <module>j-apache-commons-example</module>
         <module>j-jsoup-example</module>
         <module>j-jdbc-example</module>
+        <module>j-mybatis-example</module>
     </modules>
 
     <properties>
