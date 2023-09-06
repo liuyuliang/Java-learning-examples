@@ -36,6 +36,8 @@
         <sjf4j.version>1.7.36</sjf4j.version>
         <!--mybaits pluc -->
         <mybatis-plus>3.3.2</mybatis-plus>
+        <!-- okhttp -->
+        <okttp.version>4.9.3</okttp.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -110,6 +112,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus}</version>
+            </dependency>
+            <!-- okhttp -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okttp.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.example</groupId>

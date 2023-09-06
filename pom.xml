@@ -18,6 +18,9 @@
         <module>j-jdbc-example</module>
         <module>j-mybatis-example</module>
         <module>j-mybatis-plus-example</module>
+        <module>j-redis-example</module>
+        <module>j-okhttp-example</module>
+
     </modules>
 
     <properties>
