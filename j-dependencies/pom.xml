@@ -38,6 +38,7 @@
         <mybatis-plus>3.3.2</mybatis-plus>
         <!-- okhttp -->
         <okttp.version>4.9.3</okttp.version>
+
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -118,6 +119,12 @@
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>
                 <version>${okttp.version}</version>
+            </dependency>
+            <!--redisTemplate-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.example</groupId>
