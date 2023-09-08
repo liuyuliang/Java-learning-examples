@@ -1,15 +1,15 @@
 package org.example.elasticsearch.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.elasticsearch.service.BookService;
-import org.example.elasticsearch.vo.Book;
-import org.springframework.data.elasticsearch.core.SearchHits;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.example.elasticsearch.vo.BookBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Optional;
 
 /**
  * ClassName: C
@@ -20,25 +20,37 @@ import java.util.Map;
  */
 
 
+/**
+ * @author wx:深入技术架构
+ */
+@Slf4j
 @RestController
 public class BookController {
-    private final BookService bookService;
+    @Autowired
+    private BookService bookService;
 
-    public BookController(BookService bookService) {
-        this.bookService = bookService;
+    @RequestMapping("/book/get/{id}")
+    @ResponseBody
+    public BookBean getBookById(@PathVariable String id){
+        Optional<BookBean> opt =bookService.findById(id);
+        log.info(opt.toString());
+        BookBean book=opt.get();
+        return book;
     }
 
-    @PostMapping("/book")
-    public Map<String,String> addBook(@RequestBody Book book){
-        bookService.addBook(book);
-        Map<String,String> map = new HashMap<>();
-        map.put("msg","ok");
-        return map;
+    @RequestMapping("/book/save")
+    @ResponseBody
+    public void bookSave(){
+        BookBean book=new BookBean("1","ES 入门教程","张三","2022-08-05");
+        System.out.println(book);
+        bookService.save(book);
     }
 
-    @GetMapping("/book/search")
-    public SearchHits<Book> search(String key){
-        return bookService.searchBook1(key);
+    @RequestMapping("/book/edit")
+    @ResponseBody
+    public void bookEdit(){
+        BookBean book=new BookBean("1","ES 高级教程","李四","2022-08-05");
+        System.out.println(book);
+        bookService.save(book);
     }
 }
-

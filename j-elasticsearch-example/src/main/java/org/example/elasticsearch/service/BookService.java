@@ -8,54 +8,33 @@ package org.example.elasticsearch.service;
  * @date 2023/9/8 10:12
  */
 
-import org.example.elasticsearch.repository.ESBookRepository;
-import org.example.elasticsearch.vo.Book;
-import org.springframework.beans.BeanUtils;
-import org.springframework.data.elasticsearch.core.SearchHits;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.support.TransactionTemplate;
+
+import org.example.elasticsearch.vo.BookBean;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
+import java.util.Optional;
+
 
 /**
  * @author geng
  * 2020/12/19
  */
 
-@Service
-public class BookService {
-    private final ESBookRepository bookRepository;
-    private final ESBookRepository esBookRepository;
-    private final TransactionTemplate transactionTemplate;
+public interface BookService {
 
-    public BookService(ESBookRepository bookRepository,
-                       ESBookRepository esBookRepository,
-                       TransactionTemplate transactionTemplate) {
-        this.bookRepository = bookRepository;
-        this.esBookRepository = esBookRepository;
-        this.transactionTemplate = transactionTemplate;
-    }
+    Optional<BookBean> findById(String id);
 
-    public void addBook(Book book) {
-        final Book saveBook = transactionTemplate.execute((status) ->
-                bookRepository.save(book)
-        );
-        final Book esBook = new Book();
-        assert saveBook != null;
-        BeanUtils.copyProperties(saveBook, esBook);
-        esBook.setId(saveBook.getId() + "");
-        try {
-            esBookRepository.save(esBook);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    BookBean save(BookBean book);
 
-    public List<Book> searchBook(String keyword) {
-        return esBookRepository.findByTitleOrAuthor(keyword, keyword);
-    }
+    void delete(BookBean book);
 
-    public SearchHits<Book> searchBook1(String keyword) {
-        return esBookRepository.find(keyword);
-    }
+    Optional<BookBean> findOne(String id);
+
+    List<BookBean> findAll();
+
+    Page<BookBean> findByAuthor(String author, PageRequest pageRequest);
+
+    Page<BookBean> findByTitle(String title, PageRequest pageRequest);
 }
