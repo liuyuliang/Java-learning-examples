@@ -22,6 +22,7 @@
         <module>j-okhttp-example</module>
         <module>j-elasticsearch-example</module>
         <module>j-mockito-example</module>
+        <module>j-kafka-example</module>
 
     </modules>
 

@@ -4,11 +4,11 @@ import org.example.mockito.MockitoApplication;
 import org.example.mockito.dao.UserDao;
 import org.example.mockito.entity.User;
 import org.example.mockito.service.UserService;
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.*;
+import org.mockito.ArgumentMatchers;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,10 +19,6 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import java.io.UnsupportedEncodingException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * ClassName: UserControllerTest
