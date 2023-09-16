@@ -23,6 +23,7 @@
         <module>j-elasticsearch-example</module>
         <module>j-mockito-example</module>
         <module>j-kafka-example</module>
+        <module>j-file-example</module>
 
     </modules>
 
