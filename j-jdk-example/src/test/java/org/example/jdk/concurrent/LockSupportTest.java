@@ -3,6 +3,8 @@ package org.example.jdk.concurrent;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.LinkedTransferQueue;
+import java.util.concurrent.TransferQueue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
@@ -10,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * ClassName: LockSupport
- * Description：<pre>
+ * Description：<pre> 线程交替输出
  *     交替打印以下两个变量
  *      char[] aI = "1234567".toCharArray();
  *      char[] aC = "ABCDEFG".toCharArray();
@@ -142,5 +144,30 @@ public class LockSupportTest {
             }
         }, "t2").start();
     }
-
+@Test
+    public  void testTransferQueue(){
+    char[] aI = "1234567".toCharArray();
+    char[] aC = "ABCDEFG".toCharArray();
+    TransferQueue<Character> queue = new LinkedTransferQueue<>();
+    new Thread(()->{
+        try {
+            for (char c :aI){
+                System.out.print(queue.take());
+                queue.transfer(c);//阻塞
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    },"t1").start();
+    new Thread(()->{
+        try {
+            for(char c:aC){
+                queue.transfer(c);
+                System.out.println(queue.take());
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    },"t2").start();
+}
 }
