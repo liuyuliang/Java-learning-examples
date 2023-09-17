@@ -3,7 +3,10 @@ package org.example.jdk.concurrent;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * ClassName: LockSupport
@@ -99,4 +102,45 @@ public class LockSupportTest {
             }
         }, "t2").start();
     }
+
+    @Test
+    public void testReentrantLock() {
+        char[] aI = "1234567".toCharArray();
+        char[] aC = "ABCDEFG".toCharArray();
+        Lock lock = new ReentrantLock();
+        Condition conditionT1 = lock.newCondition();
+        Condition conditionT2 = lock.newCondition();
+        new Thread(() -> {
+            lock.lock();//要放在try外面
+            try {
+
+                for (char c : aI) {
+                    System.out.print(c);
+                    conditionT2.signal();//唤醒等待在该锁上的一个线程
+                    conditionT1.await();
+                }
+                conditionT2.signal();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                lock.unlock();
+            }
+        }, "t1").start();
+        new Thread(() -> {
+            lock.lock();
+            try {
+
+                for (char c : aC) {
+                    System.out.println(c);
+                    conditionT1.signal();
+                    conditionT2.await();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                lock.unlock();
+            }
+        }, "t2").start();
+    }
+
 }
