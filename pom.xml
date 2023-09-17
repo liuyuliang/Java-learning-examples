@@ -24,6 +24,7 @@
         <module>j-mockito-example</module>
         <module>j-kafka-example</module>
         <module>j-file-example</module>
+        <module>j-mongodb-example</module>
 
     </modules>
 
