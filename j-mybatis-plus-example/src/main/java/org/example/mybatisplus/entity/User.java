@@ -2,14 +2,17 @@ package org.example.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @TableName user
  */
-@Data
+
 @TableName("user")
+@Data
 public class User implements Serializable {
 
 
