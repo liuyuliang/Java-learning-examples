@@ -25,6 +25,7 @@
         <module>j-kafka-example</module>
         <module>j-file-example</module>
         <module>j-mongodb-example</module>
+        <module>j-security-example</module>
 
     </modules>
 
