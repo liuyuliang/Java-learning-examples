@@ -4,5 +4,14 @@
 
 类似Using generated security password: f9a6b443-5a5b-4603-92e9-13756e401c6b
 
-执行init.sql
+1.执行init.sql
 
+2.在idea中生成代码
+
+
+
+![](./img/1.bmp)
+
+
+
+![](./img/2.bmp)
