@@ -26,8 +26,8 @@ public class SecurityConfig {
                         authorizeHttpRequests.requestMatchers("/login").permitAll().anyRequest().authenticated()
                 );
 
-        http.formLogin(formLogin -> formLogin.loginPage("/login").permitAll().
-                loginProcessingUrl("/login").defaultSuccessUrl("/out"));
+        http.formLogin(formLogin -> formLogin.loginPage("/login").
+                loginProcessingUrl("/login").permitAll().defaultSuccessUrl("/out",true));
         //
         http.csrf(csrf -> csrf.disable());
         http.logout(logout -> logout.invalidateHttpSession(true).deleteCookies());

@@ -26,3 +26,4 @@ replay_pid*
 /j-jdk-example/target/classes/META-INF/j-jdk-example.kotlin_module
 /j-security-example/j-spring-security-example/target/
 /j-security-example/j-spring-security-example/target/classes/
+/j-redis-example/j-redisTemplate-example/target/classes/application.yaml
