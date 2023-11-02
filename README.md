@@ -1,6 +1,6 @@
 # java learning example
 
-
+运行环境：jdk17 
 
 ### 模块介绍
 
