@@ -27,7 +27,7 @@ public class SecurityConfig {
                 );
 
         http.formLogin(formLogin -> formLogin.loginPage("/login").permitAll().
-                loginProcessingUrl("/login").defaultSuccessUrl("/index"));
+                loginProcessingUrl("/login").defaultSuccessUrl("/index2"));
         //
         http.csrf(csrf -> csrf.disable());
         http.logout(logout -> logout.invalidateHttpSession(true).deleteCookies());
@@ -35,13 +35,4 @@ public class SecurityConfig {
         return http.build();
     }
 
-//    private Filter myFilter() {
-//        return new OncePerRequestFilter() {
-//            @Override
-//            protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws  ServletException, IOException {
-//                // 你的过滤逻辑...
-//                chain.doFilter(request, response);
-//            }
-//        };
-//    }
 }
