@@ -1,6 +1,8 @@
 package org.example.spring.security.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,10 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Yuliang Lau
  * @date 2023/10/31 17:03
  */
-@RestController
+@Controller
 public class IndexController {
-    @GetMapping("/index2")
-    public String index(){
-        return  "index";
+
+    @RequestMapping("/out")
+    public String login() {
+        return "out";
     }
 }
