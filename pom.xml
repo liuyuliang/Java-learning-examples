@@ -3,12 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>${spring.boot.version}</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <groupId>org.example</groupId>
     <artifactId>Java-learning-examples</artifactId>
     <packaging>pom</packaging>
     <version>${jversion}</version>
     <description>java learning examples</description>
+
     <modules>
         <module>j-dependencies</module>
         <module>j-jdk-example</module>
@@ -30,6 +36,7 @@
     </modules>
 
     <properties>
+        <spring.boot.version>3.1.5</spring.boot.version>
         <jversion>0.1-SNAPSHOT</jversion>
         <!--maven 相关-->
         <java.version>17</java.version>
