@@ -5,12 +5,14 @@
     <title>login</title>
 </head>
 <body>
+<h1 style="background-color: #25a31a">首页</h1>
 <h1 style="background-color: chocolate">welcome</h1>
 <a th:href="@{/admin/api}">/admin/api</a><br/>
 <a th:href="@{/user/api}">/user/api</a><br/>
 <a th:href="@{/app/api}">/app/api</a><br/>
 <form th:action="@{/logout}" method="post">
-<input type="submit" value="logout">
+    <input type="submit" value="logout">
 </form>
+
 </body>
 </html>
