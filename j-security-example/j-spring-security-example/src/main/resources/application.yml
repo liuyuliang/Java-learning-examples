@@ -1,0 +1,21 @@
+clientName: Hutool
+connectionTimeout: 2000
+database: 0
+host: localhost
+password: password123
+port: 6379
+server:
+    port: 10000
+soTimeout: 2000
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://localhost:3306/demo?Unicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+    main:
+        allow-circular-references: true #解决循环依赖
+ssl: false;
+timeout: 2000
+
+

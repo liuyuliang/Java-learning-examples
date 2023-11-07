@@ -53,16 +53,16 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
-        /***用户角色*/
-//        UserDetails user1 = User.withUsername("admin").password("123456").roles("admin", "user").build();
-//        UserDetails user2 = User.withUsername("user").password("123456").roles("user").build();
-        /***用户权限*/
-        UserDetails user1 = User.withUsername("admin").password("123456").authorities("admin:api", "user:api").build();
-        UserDetails user2 = User.withUsername("user").password("123456").authorities("user:api").build();
-        return new InMemoryUserDetailsManager(user1, user2);
-    }
+//    @Bean
+//    public InMemoryUserDetailsManager inMemoryUserDetailsManager() {
+//        /***用户角色*/
+////        UserDetails user1 = User.withUsername("admin").password("123456").roles("admin", "user").build();
+////        UserDetails user2 = User.withUsername("user").password("123456").roles("user").build();
+//        /***用户权限*/
+//        UserDetails user1 = User.withUsername("admin").password("123456").authorities("admin:api", "user:api").build();
+//        UserDetails user2 = User.withUsername("user").password("123456").authorities("user:api").build();
+//        return new InMemoryUserDetailsManager(user1, user2);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {

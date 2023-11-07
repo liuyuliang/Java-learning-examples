@@ -35,7 +35,7 @@
         <!--sjf4j-->
         <sjf4j.version>1.7.36</sjf4j.version>
         <!--mybaits pluc -->
-        <mybatis-plus>3.3.2</mybatis-plus>
+        <mybatis-plus>3.5.3</mybatis-plus>
         <!-- okhttp -->
         <okttp.version>4.9.3</okttp.version>
         <!-- kafka -->
