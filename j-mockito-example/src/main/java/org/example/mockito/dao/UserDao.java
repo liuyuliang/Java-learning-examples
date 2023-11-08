@@ -2,8 +2,6 @@ package org.example.mockito.dao;
 
 import org.example.mockito.entity.User;
 
-import javax.annotation.Resource;
-
 /**
  * ClassName: UserDao
  * Description:
