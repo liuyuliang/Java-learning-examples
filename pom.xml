@@ -32,6 +32,8 @@
         <module>j-file-example</module>
         <module>j-mongodb-example</module>
         <module>j-security-example</module>
+        <module>j-spring-example</module>
+        <module>j-xxl-job-example</module>
 
     </modules>
 

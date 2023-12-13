@@ -28,3 +28,6 @@ replay_pid*
 /j-security-example/j-spring-security-example/target/
 /j-redis-example/j-redisTemplate-example/target/
 /j-security-example/j-spring-security-example2/target/
+/j-elasticsearch-example/target/classes/application.properties
+/j-xxl-job-example/target/classes/application.yaml
+/j-spring-example/target/classes/application.yaml
