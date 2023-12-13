@@ -21,4 +21,4 @@
 | `j-redis-example`         | redis使用示例      |
 | `j-mongodb-example`       | mongodb使用示例      |
 | `j-spring-security-example`                  | spring security 使用示例 |
-|                           |                         |
+| `j-xxl-job-example` | xxl-job 使用示例 |

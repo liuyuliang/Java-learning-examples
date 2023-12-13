@@ -31,3 +31,4 @@ replay_pid*
 /j-elasticsearch-example/target/classes/application.properties
 /j-xxl-job-example/target/classes/application.yaml
 /j-spring-example/target/classes/application.yaml
+/logs/
