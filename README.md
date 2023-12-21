@@ -1,4 +1,5 @@
 # java learning example
+mvn clean package -Dmaven.test.skip=true
 
 运行环境：jdk17 
 
