@@ -3,6 +3,10 @@ mvn clean package -Dmaven.test.skip=true
 
 运行环境：jdk17 
 
+编译
+
+![](./img/compile.bmp)
+
 ### 模块介绍
 
 | 项目                        | 说明                    |

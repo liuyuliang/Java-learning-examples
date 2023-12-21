@@ -6,16 +6,11 @@
         <artifactId>Java-learning-examples</artifactId>
         <groupId>org.example</groupId>
         <version>${jversion}</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>j-util</artifactId>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>

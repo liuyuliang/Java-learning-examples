@@ -18,8 +18,8 @@
     <modules>
         <module>j-dependencies</module>
         <module>j-jdk-example</module>
-        <!--<module>j-util</module>
-        <module>j-apache-commons-example</module>
+       <module>j-util</module>
+        <!-- <module>j-apache-commons-example</module>
         <module>j-jsoup-example</module>
         <module>j-jdbc-example</module>
         <module>j-mybatis-example</module>
@@ -45,7 +45,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-        <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
 
     </properties>
 
@@ -77,8 +77,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>17</source>
-                        <target>17</target>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
             </plugins>
