@@ -18,22 +18,22 @@
     <modules>
         <module>j-dependencies</module>
         <module>j-jdk-example</module>
-       <module>j-util</module>
-         <module>j-apache-commons-example</module>
-         <module>j-jsoup-example</module>
-         <module>j-jdbc-example</module>
-         <module>j-mybatis-example</module>
-          <module>j-mybatis-plus-example</module>
-           <module>j-redis-example</module>
-         <module>j-okhttp-example</module>
-           <module>j-elasticsearch-example</module>
-        <!--   <module>j-mockito-example</module>
-          <module>j-kafka-example</module>
-          <module>j-file-example</module>
-          <module>j-mongodb-example</module>
-          <module>j-security-example</module>
-          <module>j-spring-example</module>
-          <module>j-xxl-job-example</module>-->
+        <module>j-util</module>
+        <module>j-apache-commons-example</module>
+        <module>j-jsoup-example</module>
+        <module>j-jdbc-example</module>
+        <module>j-mybatis-example</module>
+        <module>j-mybatis-plus-example</module>
+        <module>j-redis-example</module>
+        <module>j-okhttp-example</module>
+        <module>j-elasticsearch-example</module>
+        <module>j-mockito-example</module>
+        <module>j-kafka-example</module>
+        <module>j-file-example</module>
+        <module>j-mongodb-example</module>
+        <module>j-security-example</module>
+        <module>j-spring-example</module>
+        <module>j-xxl-job-example</module>
 
     </modules>
 
@@ -50,15 +50,15 @@
     </properties>
 
     <dependencyManagement>
-      <dependencies>
-          <dependency>
-              <groupId>org.example</groupId>
-              <artifactId>j-dependencies</artifactId>
-              <version>${jversion}</version>
-              <scope>import</scope>
-              <type>pom</type>
-          </dependency>
-      </dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>j-dependencies</artifactId>
+                <version>${jversion}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
     <build>
         <pluginManagement>

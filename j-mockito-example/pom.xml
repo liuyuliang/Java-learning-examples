@@ -6,15 +6,15 @@
         <artifactId>Java-learning-examples</artifactId>
         <groupId>org.example</groupId>
         <version>${jversion}</version>
-        <relativePath>../pom.xml</relativePath>
+
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>j-mockito-example</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
     <dependencies>
         <!-- spring -->
