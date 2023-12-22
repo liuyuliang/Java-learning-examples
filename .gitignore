@@ -32,3 +32,4 @@ replay_pid*
 /j-xxl-job-example/target/classes/application.yaml
 /j-spring-example/target/classes/application.yaml
 /logs/
+target/
