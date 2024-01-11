@@ -1,11 +1,10 @@
 package org.example.spring.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * ClassName: Demo
+ * spring 示例
  * Description:
  *
  * @author Yuliang Lau
@@ -14,8 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class DemoController {
+    /**
+     *  测试
+     * @return
+     */
     @RequestMapping("/test")
     public String test(){
-        return  "test";
+        return  "test"+System.currentTimeMillis();
     }
 }
