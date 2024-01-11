@@ -27,3 +27,4 @@ mvn clean package -Dmaven.test.skip=true
 | `j-mongodb-example`       | mongodb使用示例      |
 | `j-spring-security-example`                  | spring security 使用示例 |
 | `j-xxl-job-example` | xxl-job 使用示例 |
+| `j-xxl-gateway-example` | spring-gateway 使用示例 |

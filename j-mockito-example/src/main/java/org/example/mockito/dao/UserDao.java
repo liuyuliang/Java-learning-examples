@@ -1,6 +1,7 @@
 package org.example.mockito.dao;
 
 import org.example.mockito.entity.User;
+import org.springframework.stereotype.Service;
 
 /**
  * ClassName: UserDao
