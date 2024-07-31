@@ -19,8 +19,12 @@ public class Job {
     public void demoJobHandler() throws Exception {
         System.out.println("start job...................");
     }
+
+    /**
+     *                   0 0 0 25 * ?   每月25号0点执行
+     */
     @XxlJob("demoDateJobHandler")
-    public void genMonth(String start,String end ){
+    public void genMonth(){
         // 获取参数
         String param = XxlJobHelper.getJobParam();
         String[] methodParams = param.split(",");

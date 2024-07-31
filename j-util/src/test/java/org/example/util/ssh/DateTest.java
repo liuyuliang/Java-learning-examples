@@ -16,7 +16,10 @@ import java.util.List;
  * @author Yuliang Lau
  * @date 2024/1/29 16:03
  */
-public class HutoolTest {
+public class DateTest {
+    /**
+     * 获得前2个月的年月
+     */
     @Test
     public void testDate() {
         // 获取当前日期
@@ -35,6 +38,9 @@ public class HutoolTest {
         System.out.println("前两个月的日期（格式为 yyyyMM）是: " + formattedDate);
     }
 
+    /**
+     * 两个日期之间的所有日期 yyyymm
+     */
     @Test
     public void testMonth() {
         String startDate = "202201"+"01"; // 开始日期，格式为yyyyMM
