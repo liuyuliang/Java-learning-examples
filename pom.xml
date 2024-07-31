@@ -37,6 +37,8 @@
         <module>j-xxl-job-example</module>
         <module>j-gateway-example</module>
         <module>j-nacos-example</module>
+        <module>j-easyexcel-example</module>
+        <module>j-easypoi-example</module>
 
     </modules>
 

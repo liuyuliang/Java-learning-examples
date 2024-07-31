@@ -46,6 +46,8 @@
         <xxl-job.version>2.3.1</xxl-job.version>
         <!-- nacos -->
         <nacos.version>2022.0.0.0-RC2</nacos.version>
+        <!-- easyexcel -->
+        <easyexecl.version>4.0.1</easyexecl.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -209,6 +211,12 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${nacos.version}</version>
+            </dependency>
+            <!-- easyexcel -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexecl.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
