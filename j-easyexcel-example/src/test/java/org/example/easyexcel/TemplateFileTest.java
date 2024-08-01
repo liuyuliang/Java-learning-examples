@@ -5,6 +5,11 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.builder.ExcelWriterBuilder;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.alibaba.excel.write.metadata.fill.FillConfig;
+import com.alibaba.excel.write.metadata.style.WriteCellStyle;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.example.easyexcel.handler.CustomCellWriteHandler;
 import org.example.easyexcel.vo.Person;
 import org.example.easyexcel.vo.StaffSalaryEntity;
 import org.junit.jupiter.api.Test;
@@ -33,6 +38,7 @@ public class TemplateFileTest {
 
         // 创建写入对象
         ExcelWriter excelWriter = EasyExcel.write(new File(fileName))
+                .registerWriteHandler(new CustomCellWriteHandler())
                 .withTemplate(new File(templateFileName))
                 .build();
 
@@ -69,7 +75,9 @@ public class TemplateFileTest {
         ExcelWriter writer = EasyExcel
                 // 写入到
                 .write(outFilePath)
+                .registerWriteHandler(new CustomCellWriteHandler())
                 // 指定模板
+
                 .withTemplate(templateFilePath)
                 .build();
 
@@ -81,6 +89,7 @@ public class TemplateFileTest {
         FillConfig fillConfig = FillConfig.builder()
                 // 开启填充换行
                 .forceNewRow(true)
+                .autoStyle(false)
                 .build();
 
         // 执行填充操作
